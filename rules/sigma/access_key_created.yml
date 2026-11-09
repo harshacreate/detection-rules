@@ -1,0 +1,19 @@
+title: Access Key Created By IAM User
+id: 5f32409d-4c70-46cf-8baf-328e3239fd66
+status: test
+description: Detects access key creation by an IAM user in normalized SentinelGrid events.
+references:
+  - https://github.com/harshacreate/SentinelGrid-ATK
+author: Harsha Malepati
+date: 2026/11/10
+tags:
+  - attack.persistence
+logsource:
+  product: sentinelgrid
+  service: cloud_audit
+detection:
+  selection:
+    event_name: CreateAccessKey
+    actor_type: IAMUser
+  condition: selection
+level: medium

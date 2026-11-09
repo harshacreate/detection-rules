@@ -1,0 +1,17 @@
+title: Failed Cloud Console Login
+id: 384e6d26-2b8d-437f-85a6-c1b3e92302b1
+status: test
+description: Detects one failed console login; this example does not aggregate bursts.
+author: Harsha Malepati
+date: 2026/11/10
+tags:
+  - attack.credential_access
+logsource:
+  product: sentinelgrid
+  service: cloud_audit
+detection:
+  selection:
+    event_name: ConsoleLogin
+    login_result: Failure
+  condition: selection
+level: low

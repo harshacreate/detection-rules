@@ -1,0 +1,16 @@
+title: Cloud Audit Logging Disabled
+id: 12493da5-8884-443d-b0eb-12b36e5e6fa0
+status: test
+description: Detects a request to stop cloud audit logging in normalized SentinelGrid events.
+author: Harsha Malepati
+date: 2026/11/10
+tags:
+  - attack.defense_evasion
+logsource:
+  product: sentinelgrid
+  service: cloud_audit
+detection:
+  selection:
+    event_name: StopLogging
+  condition: selection
+level: high
