@@ -2,6 +2,8 @@
 
 A small rule-testing lab for cloud audit events: Sigma rules cover selected AWS-style activity, and YARA rules scan inert text fixtures for two suspicious string patterns. The event schema is intentionally normalized for this project and can be mapped from SentinelGrid-ATK scenarios.
 
+[![CI](https://github.com/harshacreate/detection-rules/actions/workflows/ci.yml/badge.svg)](https://github.com/harshacreate/detection-rules/actions/workflows/ci.yml)
+
 ## Problem / why it matters
 
 Detection rules need repeatable tests. A rule that looks plausible can miss the event it was meant to catch, or match ordinary activity too broadly. This repository keeps each example close to a positive event, a negative control, and a small local test harness.
@@ -48,7 +50,7 @@ The runner prints one JSON object per matching event. `make test` and `make rule
 
 ## Data and rule provenance
 
-No external dataset or event feed is bundled. JSONL records and text fixtures are synthetic and were written for this repository. Sigma rule structure is based on the public Sigma rule specification; the YARA files use the public YARA rule language. Check the upstream projects' current licenses before copying or redistributing their rule content. The example rules here are original, minimal patterns and do not claim upstream endorsement.
+No external dataset or event feed is bundled. JSONL records and text fixtures are synthetic and were written for this repository. Sigma rule structure follows the [Sigma rule specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html); the YARA files use the [YARA documentation](https://yara.readthedocs.io/en/stable/). The examples here are original, minimal patterns and do not claim upstream endorsement.
 
 ## Design decisions and lessons
 
