@@ -1,0 +1,4 @@
+{"event_id":"evt-001","event_time":"2026-11-10T08:00:00Z","event_name":"CreateAccessKey","actor_type":"IAMUser","principal":"demo-user","source_ip":"192.0.2.10"}
+{"event_id":"evt-002","event_time":"2026-11-10T08:01:00Z","event_name":"StopLogging","actor_type":"IAMUser","principal":"demo-user","source_ip":"192.0.2.10"}
+{"event_id":"evt-003","event_time":"2026-11-10T08:02:00Z","event_name":"ConsoleLogin","login_result":"Failure","principal":"demo-user","source_ip":"192.0.2.20"}
+{"event_id":"evt-004","event_time":"2026-11-10T08:03:00Z","event_name":"ConsoleLogin","login_result":"Success","principal":"demo-user","source_ip":"192.0.2.20"}
